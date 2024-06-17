@@ -1,0 +1,8 @@
+<tr th:each="itemDto, status: ${itemDtoList}">
+    <td th:if="${status.even}" th:text="짝수"></td>
+    <td th:unless="${status.even}" th:text="홀수"></td>
+    <td th:text="${itemDto.getItemName()}"></td>
+    <td th:text="${itemDto.getItemDetail()}"></td>
+    <td th:text="${itemDto.getPrice()}"></td>
+    <td th:text="${itemDto.getRegTime()}"></td>
+</tr>
